@@ -20,11 +20,11 @@
           class="w-8 h-8 bg-null rounded-full cursor-pointer ring-4 ring-white"
         ></div>
         <div 
-          class="absolute top-full left-1/2 -translate-x-1/2 mt-1 text-black-500 font-medium text-sm whitespace-nowrap"
-          style="text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white"
+          class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 text-black font-semibold text-sm 
+          whitespace-nowrap bg-yellow-400 rounded-full px-2 py-1"          
         >
           {{ point.title }}
-        </div>
+        </div>     
         <div 
           v-if="activePoint?.id === point.id"
           class="absolute w-32 h-32 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-full"

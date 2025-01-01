@@ -18,3 +18,4 @@ export const initializeFirebase = () => {
   
   return { app, db };
 };
+
