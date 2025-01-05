@@ -22,5 +22,18 @@ export default defineNuxtConfig({
         }
       ]
     }
+  },
+  ssr: false,
+  nitro: {
+    preset: 'firebase',
+    static: true,
+    prerender: {
+      crawlLinks: true,
+      routes: ['/']
+    },
+    output: {
+      dir: '.output',
+      publicDir: '.output/public'
+    }
   }
 })

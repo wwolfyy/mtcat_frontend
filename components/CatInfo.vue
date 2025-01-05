@@ -1,41 +1,41 @@
 <template>
   <div class="p-4">
     <div class="flex justify-center mb-4">
-      <img 
-        :src="cat.thumbnailUrl" 
+      <img
+        :src="cat.thumbnailUrl"
         :alt="cat.name"
         class="w-32 h-32 rounded-full object-cover"
       />
-    </div>    
+    </div>
     <div class="space-y-4">
       <h3 class="text-xl font-bold bg-white/80 py-2">{{ cat.name }}</h3>
-      
+
       <div class="mt-4">
         <h4 class="font-semibold text-gray-700"></h4>
         <p class="mt-2 text-gray-600">{{ cat.description }}</p>
-      </div> 
+      </div>
       <div class="flex items-center">
         <span class="w-24 font-semibold text-gray-700">출생연도:</span>
         <span class="text-gray-600">{{ cat.date_of_birth }}</span>
-      </div>         
+      </div>
       <div class="flex items-center">
         <span class="w-24 font-semibold text-gray-700">성별:</span>
         <span class="text-gray-600">{{ cat.sex }}</span>
-      </div>          
+      </div>
 
       <div class="flex items-center">
         <span class="w-24 font-semibold text-gray-700">거주지:</span>
         <span class="text-gray-600">{{ cat.dwelling }}</span>
-      </div>          
+      </div>
 
       <div class="flex items-center">
         <span class="w-24 font-semibold text-gray-700">현상태:</span>
         <span class="text-gray-600">{{ getStatusEmoji(cat.status) }} {{ cat.status }}</span>
-      </div>   
+      </div>
       <div class="mt-4">
         <h4 class="font-semibold text-gray-700">성격:</h4>
         <p class="text-gray-600">{{ cat.character }}</p>
-      </div>        
+      </div>
       <div class="flex items-center">
         <span class="w-24 font-semibold text-gray-700">엄마:</span>
         <span class="text-gray-600">{{ cat.parents }}</span>
@@ -43,10 +43,10 @@
       <div class="flex items-center">
         <span class="w-24 font-semibold text-gray-700">애:</span>
         <span class="text-gray-600">{{ cat.offspring }}</span>
-      </div>    
+      </div>
       <div class="mt-4">
         <h4 class="font-semibold text-gray-700">건강상태:</h4>
-        <p class="text-gray-600">{{ cat.sickness || 'Unknown' }}</p>
+        <p class="text-gray-600">{{ cat.sickness }}</p>
       </div>
       <div class="flex items-center">
         <span class="w-24 font-semibold text-gray-700">중성화 여부:</span>
@@ -54,18 +54,18 @@
       </div>
       <div class="mt-4">
         <h4 class="font-semibold text-gray-700">특이사항:</h4>
-        <p class="mt-2 text-gray-600">{{ cat.note || 'Unknown' }}</p>
-      </div> 
+        <p class="mt-2 text-gray-600">{{ cat.note }}</p>
+      </div>
       <div class="flex items-center">
         <span class="w-24 font-semibold text-gray-700">사진첩:</span>
-        <span class="text-gray-600">준비 중입니다.</span>        
-      </div>      
+        <span class="text-gray-600">준비 중입니다.</span>
+      </div>
       <div class="flex items-center">
         <span class="w-24 font-semibold text-gray-700">동영상:</span>
-        <span class="text-gray-600">준비 중입니다.</span>    
-      </div>  
+        <span class="text-gray-600">준비 중입니다.</span>
+      </div>
     </div>
-  </div>  
+  </div>
 </template>
 
 <script setup>
